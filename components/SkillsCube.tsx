@@ -1,19 +1,21 @@
 "use client";
 import { motion } from "framer-motion";
-// Removi o SiCapcut da importação pois ele não existe na versão padrão
+// Removendo imports que podem dar erro
 import { SiHtml5, SiCss3, SiJavascript, SiNextdotjs, SiReact, SiNodedotjs, SiMysql } from "react-icons/si";
 
-// Ícone Oficial do CapCut (SVG Manual Corrigido)
+// Ícone CapCut Desenhado Manualmente (Estilo ><)
 const CapCutIcon = ({ className }: { className?: string }) => (
   <svg 
     viewBox="0 0 24 24" 
     fill="currentColor"
-    width="1em" height="1em" // Garante que ele use o tamanho da fonte
+    width="1em" height="1em"
     className={className} 
     xmlns="http://www.w3.org/2000/svg"
   >
-     {/* Path oficial do logo */}
-    <path d="M4.667 4.14L10.5 10.654 4.667 17.143h4.72l5.834-6.489-5.834-6.514H4.667zm14.666 0h-4.72L8.78 10.654l5.833 6.489h4.72l-5.833-6.489 5.833-6.514z" />
+    {/* Forma da Esquerda (> apontando pra direita) */}
+    <path d="M2 5 L9 12 L2 19 L5 19 L12 12 L5 5 Z" />
+    {/* Forma da Direita (< apontando pra esquerda) */}
+    <path d="M22 5 L15 12 L22 19 L19 19 L12 12 L19 5 Z" />
   </svg>
 );
 
@@ -25,7 +27,7 @@ const techs = [
   { name: "React", icon: <SiReact className="text-[#61DAFB]" /> },
   { name: "Node.js", icon: <SiNodedotjs className="text-[#339933]" /> },
   { name: "MySQL", icon: <SiMysql className="text-[#4479A1]" /> },
-  { name: "CapCut", icon: <CapCutIcon className="text-white" /> }, // Usa o ícone corrigido
+  { name: "CapCut", icon: <CapCutIcon className="text-white" /> }, // Agora com o logo certo
 ];
 
 export default function SkillsHorizontal() {
@@ -41,7 +43,6 @@ export default function SkillsHorizontal() {
           whileHover={{ scale: 1.2, rotate: 5 }}
           className="flex flex-col items-center gap-2 group cursor-pointer"
         >
-          {/* O tamanho do ícone é definido aqui (4xl mobile, 5xl desk) */}
           <div className="text-4xl md:text-5xl filter drop-shadow-lg group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all">
             {tech.icon}
           </div>
