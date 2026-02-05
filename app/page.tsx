@@ -116,7 +116,7 @@ export default function Home() {
             >
               Próxyz
             </h3>
-            <LedButton title="🚀 ACESSAR SISTEMA" url="https://proxyz.com.br" color="red" />
+            <LedButton title="🚀 ACESSAR SISTEMA" url="https://xn--prxyz-1ta.com/" color="red" />
           </motion.div>
 
           {/* NOVO: ARCADE ZONE (MINIGAME) */}
