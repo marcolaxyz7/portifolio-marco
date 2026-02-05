@@ -16,7 +16,9 @@ export default function SnakeGame({ onClose }: { onClose: () => void }) {
   const [score, setScore] = useState(0);
 
   const generateFood = useCallback(() => {
-    let newFood;
+    // AQUI ESTÁ A CORREÇÃO: Adicionamos o tipo ": { x: number; y: number }"
+    let newFood: { x: number; y: number };
+    
     do {
       newFood = {
         x: Math.floor(Math.random() * GRID_SIZE),
